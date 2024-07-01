@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>20</y>
+      <w>410</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+- iban: String
+- balance: int
+- overdraftAuthorization: int
+--
++ constructeur
++ getters
++ setters
++ toString(): 
+
++ addMoney(amount: int): int
++ removeMoney(amount: int): int
++ transfer(otherAccount: Account, amount: int): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>0</y>
+      <w>350</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+- id: int
+- firstName: String
+- lastName: String
+--
++ constructeur
++ getId(): int
++ getFirstName(): String
++ getLastName(): String
++ toString(): String
+
++ setFirstName(String firstName): void
++ setLastName(String lastName): void
++ addAccount(account: Account): void
++ removeAccount(account: Account): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>90</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..n
+&lt; owns</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>360</y>
+      <w>410</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+- iban: String
+- balance: int
+- overdraftAuthorization: int
+--
++ constructeur
++ getters
++ setters
++ toString(): 
+
++ addMoney(amount: int): int
++ removeMoney(amount: int): int
++ transfer(otherAccount: Account, amount: int): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>340</y>
+      <w>350</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+- id: int
+- firstName: String
+- lastName: String
+--
++ constructeur
++ getId(): int
++ getFirstName(): String
++ getLastName(): String
++ setFirstName(String firstName): void
++ setLastName(String lastName): void
++ toString(): String
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>1110</y>
+      <w>410</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+- iban: String
+- balance: int
+- overdraftAuthorization: int
+
+--
++ constructeur
++ getters
++ setters
++ toString(): String
+
++ addMoney(amount: int): int
++ removeMoney(amount: int): int
++ transfer(otherAccount: Account, amount: int): void
+
+_+ checkIban(): boolean_
+
+--
+Résponsabilités :
+-- gère les opération sur un compte bancaire
+-- gère les transaction entre différents comptes
+-- vérifie des informations de compte bancaire
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>700</y>
+      <w>410</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+- iban: String
+- balance: int
+- overdraftAuthorization: int
+
+--
++ constructeur
++ getters
++ setters
++ toString(): String
+
++ addMoney(amount: int): int
++ removeMoney(amount: int): int
++ transfer(otherAccount: Account, amount: int): void
+
++ checkIban(): boolean
+
+--
+Responsabilités :
+--	représente un compte bancaire 
+-- gère les retraits et ajouts d'argent sur un compte bancaire
+-- gère les transactions entre différents comptes
+-- vérifie des informations de compte bancaire
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>710</x>
+      <y>1300</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+Représentation UML 
+d'une méthode "static"
+-&gt; elle doit être soulignée</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>1330</y>
+      <w>360</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;30.0;340.0;10.0</additional_attributes>
+  </element>
+</diagram>
